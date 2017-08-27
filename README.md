@@ -15,7 +15,7 @@ make docs
 from remote_store import assume_role, RemoteStore
 
 creds = assume_role("arn:xxx", "session_name")
-store = RemoteStore("s3://some_bucket, creds=creds)
+store = RemoteStore("s3://some_bucket", creds=creds)
 it = store.ls(["/prefix1", "/prefix2"])
 
 with next(it).open("r") as h:
