@@ -20,7 +20,7 @@ it = store.ls(["/prefix1", "/prefix2"])
 
 with next(it).open("r") as h:
     for line in h:
-        print(h)
+        print(line)
 ```
 
 
